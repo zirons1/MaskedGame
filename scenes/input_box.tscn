@@ -1,0 +1,52 @@
+[gd_scene load_steps=5 format=3 uid="uid://drlt1d6hulyu4"]
+
+[ext_resource type="Script" path="res://scenes/input_box.gd" id="1_ivcoq"]
+[ext_resource type="Texture2D" uid="uid://cy4x18f6ghxe8" path="res://art/check1.png" id="1_k6xp3"]
+[ext_resource type="Texture2D" uid="uid://de64td80v7f1h" path="res://art/check2.png" id="2_t1f6p"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x60o4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_k6xp3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_t1f6p")
+}],
+"loop": true,
+"name": &"default",
+"speed": 2.0
+}]
+
+[node name="InputBox" type="Control"]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -40.0
+offset_right = 40.0
+grow_vertical = 0
+script = ExtResource("1_ivcoq")
+
+[node name="TextBox" type="HBoxContainer" parent="."]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 35.0
+offset_top = -193.0
+offset_right = 135.0
+offset_bottom = -93.0
+grow_vertical = 0
+theme_override_constants/separation = -20
+alignment = 1
+
+[node name="Check" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+visible = false
+position = Vector2(1084, -115)
+scale = Vector2(0.773333, 0.773333)
+sprite_frames = SubResource("SpriteFrames_x60o4")
+frame_progress = 0.470481

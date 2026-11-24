@@ -1,0 +1,275 @@
+[gd_scene load_steps=15 format=3 uid="uid://8jnv2celxbf0"]
+
+[ext_resource type="Script" path="res://main.gd" id="1_yrfvf"]
+[ext_resource type="Texture2D" uid="uid://dntdf4i8lkxk2" path="res://art/conf.png" id="2_b6uwb"]
+[ext_resource type="PackedScene" uid="uid://dpatm2uci2cs0" path="res://scenes/secret_box.tscn" id="2_k7qkd"]
+[ext_resource type="FontFile" uid="uid://bks7a1xjrixcw" path="res://font/gabriele.black-ribbon-fg-regular.ttf" id="2_m3emk"]
+[ext_resource type="PackedScene" uid="uid://drlt1d6hulyu4" path="res://scenes/input_box.tscn" id="3_nb2fu"]
+[ext_resource type="Script" path="res://scenes/warning_label.gd" id="6_xpa5f"]
+[ext_resource type="Script" path="res://scenes/timer.gd" id="7_4finn"]
+[ext_resource type="Script" path="res://scenes/game_over_screen.gd" id="8_gfnfy"]
+
+[sub_resource type="Gradient" id="Gradient_xdorr"]
+offsets = PackedFloat32Array(0, 0.243523, 1)
+colors = PackedColorArray(1, 0.970973, 0.915831, 1, 0.998216, 0.948309, 0.833943, 1, 1, 0.972549, 0.917647, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_w7f7w"]
+gradient = SubResource("Gradient_xdorr")
+
+[sub_resource type="Gradient" id="Gradient_7c15f"]
+colors = PackedColorArray(0, 0, 0, 0.862745, 0, 0, 0, 0.862745)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_tqcmp"]
+gradient = SubResource("Gradient_7c15f")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rrcc2"]
+bg_color = Color(1, 0.972549, 0.917647, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2umu"]
+bg_color = Color(0.815686, 0.878431, 0.890196, 1)
+corner_radius_top_left = 6
+corner_radius_top_right = 6
+corner_radius_bottom_right = 6
+corner_radius_bottom_left = 6
+
+[node name="Main2" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yrfvf")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_w7f7w")
+
+[node name="Conf" type="Sprite2D" parent="."]
+position = Vector2(593.012, 27.0178)
+rotation = 0.00589999
+scale = Vector2(0.595615, 0.495868)
+texture = ExtResource("2_b6uwb")
+
+[node name="WarningLabel" type="Label" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 30.0
+offset_top = -40.0
+offset_right = 507.0
+offset_bottom = -12.0
+grow_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_m3emk")
+theme_override_font_sizes/font_size = 24
+text = "You tried that already. Hurry up!"
+script = ExtResource("6_xpa5f")
+
+[node name="SecretBox" parent="." instance=ExtResource("2_k7qkd")]
+unique_name_in_owner = true
+rotation = 0.00938261
+
+[node name="InputBox" parent="." instance=ExtResource("3_nb2fu")]
+unique_name_in_owner = true
+layout_mode = 1
+
+[node name="Timer" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("7_4finn")
+
+[node name="Timer" type="Timer" parent="Timer"]
+unique_name_in_owner = true
+
+[node name="TimerBox" type="HBoxContainer" parent="Timer"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 491.0
+offset_top = 252.0
+offset_right = 695.0
+offset_bottom = 352.0
+theme_override_constants/separation = -15
+
+[node name="GameOverScreen" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("8_gfnfy")
+
+[node name="TextureRect" type="TextureRect" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_tqcmp")
+
+[node name="Panel" type="Panel" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -285.0
+offset_top = -102.0
+offset_right = 285.0
+offset_bottom = 246.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rrcc2")
+
+[node name="Label" type="RichTextLabel" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -276.0
+offset_top = -96.0
+offset_right = 277.0
+offset_bottom = 150.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_m3emk")
+theme_override_font_sizes/normal_font_size = 60
+theme_override_font_sizes/bold_font_size = 70
+bbcode_enabled = true
+text = "[center]You unmasked
+[b]12[/b]
+words![/center]"
+
+[node name="PlayAgain" type="Panel" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -266.0
+offset_top = 156.0
+offset_right = -30.0
+offset_bottom = 224.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t2umu")
+
+[node name="Label" type="Label" parent="GameOverScreen/PlayAgain"]
+layout_mode = 0
+offset_right = 235.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_m3emk")
+theme_override_font_sizes/font_size = 36
+text = "Play Again"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Menu" type="Panel" parent="GameOverScreen"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 27.0
+offset_top = 158.0
+offset_right = 263.0
+offset_bottom = 226.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_t2umu")
+
+[node name="Label" type="Label" parent="GameOverScreen/Menu"]
+layout_mode = 0
+offset_right = 235.0
+offset_bottom = 68.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_m3emk")
+theme_override_font_sizes/font_size = 36
+text = "Main Menu"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Tutorial" type="Control" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Tutorial"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_tqcmp")
+
+[node name="Panel" type="Panel" parent="Tutorial"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -446.0
+offset_top = -218.0
+offset_right = 446.0
+offset_bottom = 218.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_rrcc2")
+
+[node name="Label" type="RichTextLabel" parent="Tutorial"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -428.0
+offset_top = -171.0
+offset_right = 431.0
+offset_bottom = 214.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+theme_override_fonts/normal_font = ExtResource("2_m3emk")
+theme_override_font_sizes/normal_font_size = 34
+theme_override_font_sizes/bold_font_size = 28
+bbcode_enabled = true
+text = "[center]We need your help to unmask these secret words.
+
+Your guesses must be real words and must begin with the letters already revealed.
+
+Correct guesses reveal more letters and get you more time. Unmask as many words as possible!"
+
+[connection signal="timeout" from="Timer/Timer" to="Timer" method="on_timeout"]
+[connection signal="gui_input" from="GameOverScreen/PlayAgain" to="." method="_on_play_again_gui_input"]
+[connection signal="gui_input" from="GameOverScreen/Menu" to="." method="_on_menu_gui_input"]

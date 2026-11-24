@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://bld2obtdqlwll"]
+
+[ext_resource type="Texture2D" uid="uid://4dx4qqm6ns50" path="res://art/star1.png" id="2_7a2py"]
+[ext_resource type="Script" path="res://scenes/star.gd" id="3_jgrvo"]
+
+[node name="Star" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -885.0
+offset_bottom = -381.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_jgrvo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.359551, 0.449438)
+texture = ExtResource("2_7a2py")

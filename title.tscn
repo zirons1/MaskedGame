@@ -1,0 +1,219 @@
+[gd_scene load_steps=30 format=3 uid="uid://ljem37nw5fk"]
+
+[ext_resource type="Texture2D" uid="uid://dg3bkmneq4vfs" path="res://letters/T (1).png" id="1_1ysl1"]
+[ext_resource type="Script" path="res://title.gd" id="1_ir03w"]
+[ext_resource type="Texture2D" uid="uid://gd8glw77p1ex" path="res://letters/H (1).png" id="2_telms"]
+[ext_resource type="Texture2D" uid="uid://nhyqteyhu3ar" path="res://letters/E (3).png" id="3_i8bk2"]
+[ext_resource type="Texture2D" uid="uid://cpe8iau8u5kgn" path="res://letters/N (3).png" id="4_rcaf5"]
+[ext_resource type="Texture2D" uid="uid://cpkucr7xm4eil" path="res://letters/A (2).png" id="5_lruse"]
+[ext_resource type="Texture2D" uid="uid://dnykikfat0mkw" path="res://letters/M (3).png" id="6_4h8cl"]
+[ext_resource type="Texture2D" uid="uid://doeomd135ihxc" path="res://letters/E (1).png" id="7_y8c6b"]
+[ext_resource type="Texture2D" uid="uid://byf0flcf1idkp" path="res://letters/O (2).png" id="8_338fl"]
+[ext_resource type="Texture2D" uid="uid://e6t4ov1bgbre" path="res://letters/F (3).png" id="9_2ermw"]
+[ext_resource type="Texture2D" uid="uid://74nje4w5rlik" path="res://letters/T (4).png" id="10_3dgc8"]
+[ext_resource type="Texture2D" uid="uid://bu57ojho0c57c" path="res://letters/H (2).png" id="11_nwf6q"]
+[ext_resource type="Texture2D" uid="uid://dgc30jn0ks0id" path="res://letters/I (3).png" id="12_2wuuu"]
+[ext_resource type="Texture2D" uid="uid://b6umniwrr6jcq" path="res://letters/S (2).png" id="13_a0s7s"]
+[ext_resource type="Texture2D" uid="uid://b51fylj8a5x3c" path="res://letters/G (3).png" id="14_svyua"]
+[ext_resource type="Texture2D" uid="uid://btgf7pi6ggqon" path="res://letters/A (3).png" id="15_1xkrd"]
+[ext_resource type="Texture2D" uid="uid://b8n0wfmlbptff" path="res://letters/M (2).png" id="16_bjij2"]
+[ext_resource type="Texture2D" uid="uid://cl8yrsvk1s33x" path="res://letters/E (2).png" id="17_yggqq"]
+[ext_resource type="Texture2D" uid="uid://b31y1b84prsam" path="res://letters/I (4).png" id="18_dhmwg"]
+[ext_resource type="Texture2D" uid="uid://bul6o6k621wr8" path="res://letters/S (1).png" id="19_pxaco"]
+[ext_resource type="Texture2D" uid="uid://4dx4qqm6ns50" path="res://art/star1.png" id="20_6ocdn"]
+[ext_resource type="Texture2D" uid="uid://efej46eqyfgs" path="res://art/star2.png" id="21_o4onx"]
+[ext_resource type="FontFile" uid="uid://bks7a1xjrixcw" path="res://font/gabriele.black-ribbon-fg-regular.ttf" id="23_pjx1b"]
+[ext_resource type="Texture2D" uid="uid://cd37xp0xi0282" path="res://letters/P (1).png" id="24_ped36"]
+[ext_resource type="Texture2D" uid="uid://623sjaiy1mjx" path="res://letters/L (3).png" id="25_d68qh"]
+[ext_resource type="Texture2D" uid="uid://d2i3cmbon3hst" path="res://letters/A (1).png" id="26_8ge3w"]
+[ext_resource type="Texture2D" uid="uid://b3ow5cqa3re4o" path="res://letters/Y (3).png" id="27_iv44o"]
+
+[sub_resource type="Gradient" id="Gradient_8fbnt"]
+offsets = PackedFloat32Array(0, 0.266839, 1)
+colors = PackedColorArray(1, 0.970973, 0.915831, 1, 0.995768, 0.919522, 0.800784, 1, 0.996601, 0.974873, 0.896434, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_wspi7"]
+gradient = SubResource("Gradient_8fbnt")
+
+[node name="Title" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ir03w")
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_wspi7")
+
+[node name="TitleText" type="Control" parent="."]
+unique_name_in_owner = true
+anchors_preset = 0
+offset_left = 66.0
+offset_top = 6.0
+offset_right = 106.0
+offset_bottom = 46.0
+
+[node name="T(1)" type="Sprite2D" parent="TitleText"]
+position = Vector2(195.184, 58.184)
+rotation = -0.181004
+texture = ExtResource("1_1ysl1")
+
+[node name="H(1)" type="Sprite2D" parent="TitleText"]
+position = Vector2(256.184, 56.3681)
+texture = ExtResource("2_telms")
+
+[node name="E(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(329.184, 57.184)
+texture = ExtResource("3_i8bk2")
+
+[node name="N(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(439, 65)
+texture = ExtResource("4_rcaf5")
+
+[node name="A(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(512, 71)
+texture = ExtResource("5_lruse")
+
+[node name="M(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(594, 71)
+texture = ExtResource("6_4h8cl")
+
+[node name="E(1)" type="Sprite2D" parent="TitleText"]
+position = Vector2(685, 69)
+texture = ExtResource("7_y8c6b")
+
+[node name="O(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(807, 59.2274)
+texture = ExtResource("8_338fl")
+
+[node name="F(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(878, 64.6134)
+rotation = 0.217551
+texture = ExtResource("9_2ermw")
+
+[node name="T(4)" type="Sprite2D" parent="TitleText"]
+position = Vector2(170, 178)
+texture = ExtResource("10_3dgc8")
+
+[node name="H(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(245, 177)
+texture = ExtResource("11_nwf6q")
+
+[node name="I(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(310, 176)
+texture = ExtResource("12_2wuuu")
+
+[node name="S(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(370, 177)
+texture = ExtResource("13_a0s7s")
+
+[node name="G(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(497, 175)
+texture = ExtResource("14_svyua")
+
+[node name="A(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(569, 173)
+texture = ExtResource("15_1xkrd")
+
+[node name="M(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(652, 174)
+texture = ExtResource("16_bjij2")
+
+[node name="E(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(729, 177)
+texture = ExtResource("17_yggqq")
+
+[node name="I(4)" type="Sprite2D" parent="TitleText"]
+position = Vector2(832, 181)
+texture = ExtResource("18_dhmwg")
+
+[node name="S(1)" type="Sprite2D" parent="TitleText"]
+position = Vector2(896, 182)
+texture = ExtResource("19_pxaco")
+
+[node name="Star1" type="Sprite2D" parent="TitleText"]
+position = Vector2(68.8, 349.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("20_6ocdn")
+
+[node name="Star2" type="Sprite2D" parent="TitleText"]
+position = Vector2(252.8, 347.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("21_o4onx")
+
+[node name="Star3" type="Sprite2D" parent="TitleText"]
+position = Vector2(418.8, 355.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("20_6ocdn")
+
+[node name="Star4" type="Sprite2D" parent="TitleText"]
+position = Vector2(603.8, 348.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("21_o4onx")
+
+[node name="Star5" type="Sprite2D" parent="TitleText"]
+position = Vector2(773.8, 356.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("20_6ocdn")
+
+[node name="Star6" type="Sprite2D" parent="TitleText"]
+position = Vector2(956.8, 352.8)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("21_o4onx")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 467.0
+offset_top = 482.0
+offset_right = 756.0
+offset_bottom = 510.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("23_pjx1b")
+theme_override_font_sizes/font_size = 24
+text = "a game by ZACH IRONS"
+
+[node name="Play" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 449.0
+offset_top = 370.0
+offset_right = 489.0
+offset_bottom = 410.0
+
+[node name="P(1)" type="Sprite2D" parent="Play"]
+position = Vector2(73, 208.389)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("24_ped36")
+
+[node name="L(3)" type="Sprite2D" parent="Play"]
+position = Vector2(120, 206.389)
+rotation = 0.174602
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("25_d68qh")
+
+[node name="A(1)" type="Sprite2D" parent="Play"]
+position = Vector2(174, 209.389)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("26_8ge3w")
+
+[node name="Y(3)" type="Sprite2D" parent="Play"]
+position = Vector2(229, 210.389)
+scale = Vector2(0.68, 0.68)
+texture = ExtResource("27_iv44o")
+
+[node name="Panel" type="Panel" parent="Play"]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 0
+offset_left = 51.0
+offset_top = 171.0
+offset_right = 252.0
+offset_bottom = 244.0
+
+[connection signal="gui_input" from="Play/Panel" to="." method="_on_panel_gui_input"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://r0qe6orremdv"]
+
+[ext_resource type="Texture2D" uid="uid://c263re51casyx" path="res://letters/Q (4).png" id="1_c8y6s"]
+[ext_resource type="Script" path="res://scenes/letter.gd" id="2_i6s7j"]
+
+[node name="Letter" type="TextureRect"]
+offset_right = 330.0
+offset_bottom = 340.0
+scale = Vector2(0.45, 0.45)
+pivot_offset = Vector2(145, 170)
+texture = ExtResource("1_c8y6s")
+stretch_mode = 3
+script = ExtResource("2_i6s7j")
+
+[connection signal="gui_input" from="." to="." method="_on_gui_input"]

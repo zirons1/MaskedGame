@@ -1,0 +1,185 @@
+[gd_scene load_steps=24 format=3 uid="uid://0t50ral4d3ui"]
+
+[ext_resource type="Texture2D" uid="uid://dg3bkmneq4vfs" path="res://letters/T (1).png" id="1_n860y"]
+[ext_resource type="Texture2D" uid="uid://gd8glw77p1ex" path="res://letters/H (1).png" id="2_mgm1k"]
+[ext_resource type="Texture2D" uid="uid://nhyqteyhu3ar" path="res://letters/E (3).png" id="3_gjuju"]
+[ext_resource type="Texture2D" uid="uid://cpe8iau8u5kgn" path="res://letters/N (3).png" id="4_i4gta"]
+[ext_resource type="Texture2D" uid="uid://cpkucr7xm4eil" path="res://letters/A (2).png" id="5_3dkwg"]
+[ext_resource type="Texture2D" uid="uid://dnykikfat0mkw" path="res://letters/M (3).png" id="6_abq76"]
+[ext_resource type="Texture2D" uid="uid://doeomd135ihxc" path="res://letters/E (1).png" id="7_onb2l"]
+[ext_resource type="Texture2D" uid="uid://byf0flcf1idkp" path="res://letters/O (2).png" id="8_jbwat"]
+[ext_resource type="Texture2D" uid="uid://e6t4ov1bgbre" path="res://letters/F (3).png" id="9_ncrr5"]
+[ext_resource type="Texture2D" uid="uid://74nje4w5rlik" path="res://letters/T (4).png" id="10_2s8jf"]
+[ext_resource type="Texture2D" uid="uid://bu57ojho0c57c" path="res://letters/H (2).png" id="11_cm8en"]
+[ext_resource type="Texture2D" uid="uid://dgc30jn0ks0id" path="res://letters/I (3).png" id="12_0rq6h"]
+[ext_resource type="Texture2D" uid="uid://b6umniwrr6jcq" path="res://letters/S (2).png" id="13_haail"]
+[ext_resource type="Texture2D" uid="uid://b51fylj8a5x3c" path="res://letters/G (3).png" id="14_ptqsu"]
+[ext_resource type="Texture2D" uid="uid://btgf7pi6ggqon" path="res://letters/A (3).png" id="15_b2wy7"]
+[ext_resource type="Texture2D" uid="uid://b8n0wfmlbptff" path="res://letters/M (2).png" id="16_g17yu"]
+[ext_resource type="Texture2D" uid="uid://cl8yrsvk1s33x" path="res://letters/E (2).png" id="17_14wmj"]
+[ext_resource type="Texture2D" uid="uid://b31y1b84prsam" path="res://letters/I (4).png" id="18_3xswh"]
+[ext_resource type="Texture2D" uid="uid://bul6o6k621wr8" path="res://letters/S (1).png" id="19_clcpd"]
+[ext_resource type="Texture2D" uid="uid://4dx4qqm6ns50" path="res://art/star1.png" id="20_4c2ll"]
+[ext_resource type="Texture2D" uid="uid://efej46eqyfgs" path="res://art/star2.png" id="21_gbx73"]
+
+[sub_resource type="Gradient" id="Gradient_5stal"]
+offsets = PackedFloat32Array(0, 0.266839, 1)
+colors = PackedColorArray(1, 0.970973, 0.915831, 1, 0.995768, 0.919522, 0.800784, 1, 0.996601, 0.974873, 0.896434, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rep2s"]
+gradient = SubResource("Gradient_5stal")
+
+[node name="Splash" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -522.0
+offset_bottom = -148.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("GradientTexture1D_rep2s")
+
+[node name="TitleText" type="Control" parent="."]
+unique_name_in_owner = true
+layout_mode = 3
+anchors_preset = 0
+offset_left = 66.0
+offset_top = 6.0
+offset_right = 106.0
+offset_bottom = 46.0
+
+[node name="T(1)" type="Sprite2D" parent="TitleText"]
+position = Vector2(-16, 65)
+rotation = -0.181004
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("1_n860y")
+
+[node name="H(1)" type="Sprite2D" parent="TitleText"]
+position = Vector2(47, 67)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("2_mgm1k")
+
+[node name="E(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(124, 67)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("3_gjuju")
+
+[node name="N(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(238, 67)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("4_i4gta")
+
+[node name="A(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(304, 65)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("5_3dkwg")
+
+[node name="M(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(389, 68)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("6_abq76")
+
+[node name="E(1)" type="Sprite2D" parent="TitleText"]
+position = Vector2(491, 66)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("7_onb2l")
+
+[node name="O(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(44, 183.575)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("8_jbwat")
+
+[node name="F(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(123, 190.575)
+rotation = 0.217551
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("9_ncrr5")
+
+[node name="T(4)" type="Sprite2D" parent="TitleText"]
+position = Vector2(221, 184)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("10_2s8jf")
+
+[node name="H(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(308, 187)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("11_cm8en")
+
+[node name="I(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(380, 186)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("12_0rq6h")
+
+[node name="S(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(446, 183)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("13_haail")
+
+[node name="G(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(39, 300)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("14_ptqsu")
+
+[node name="A(3)" type="Sprite2D" parent="TitleText"]
+position = Vector2(123, 304)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("15_b2wy7")
+
+[node name="M(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(213, 306)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("16_g17yu")
+
+[node name="E(2)" type="Sprite2D" parent="TitleText"]
+position = Vector2(299, 304)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("17_14wmj")
+
+[node name="I(4)" type="Sprite2D" parent="TitleText"]
+position = Vector2(385, 305)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("18_3xswh")
+
+[node name="S(1)" type="Sprite2D" parent="TitleText"]
+position = Vector2(456, 303)
+scale = Vector2(1.1, 1.1)
+texture = ExtResource("19_clcpd")
+
+[node name="Star1" type="Sprite2D" parent="TitleText"]
+position = Vector2(0.405006, 422.405)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("20_4c2ll")
+
+[node name="Star2" type="Sprite2D" parent="TitleText"]
+position = Vector2(103.405, 420.405)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("21_gbx73")
+
+[node name="Star3" type="Sprite2D" parent="TitleText"]
+position = Vector2(196.405, 424.405)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("20_4c2ll")
+
+[node name="Star4" type="Sprite2D" parent="TitleText"]
+position = Vector2(297.405, 418.405)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("21_gbx73")
+
+[node name="Star5" type="Sprite2D" parent="TitleText"]
+position = Vector2(390.405, 421.405)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("20_4c2ll")
+
+[node name="Star6" type="Sprite2D" parent="TitleText"]
+position = Vector2(493.405, 420.405)
+scale = Vector2(0.43, 0.43)
+texture = ExtResource("21_gbx73")
